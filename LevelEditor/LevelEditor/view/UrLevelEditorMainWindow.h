@@ -4,13 +4,13 @@
 #include <QtGui/QMainWindow>
 #include "ui_urleveleditor.h"
 
-class UrLevelEditor : public QMainWindow
+class UrLevelEditorMainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    UrLevelEditor(QWidget *parent = 0, Qt::WFlags flags = 0);
-    ~UrLevelEditor();
+    UrLevelEditorMainWindow(QWidget *parent = 0, Qt::WFlags flags = 0);
+    ~UrLevelEditorMainWindow();
 
 private:
     Ui::UrLevelEditorClass ui;

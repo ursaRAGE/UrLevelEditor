@@ -41,24 +41,39 @@
     <ClCompile Include="GeneratedFiles\qrc_urleveleditor.cpp">
       <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="urLevelEditorMainWindow.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MOC\Debug\moc_urLevelEditorMainWindow.cpp">
+    <ClCompile Include="MOC\Debug\moc_UrLevelEditorMainWindow.cpp">
       <Filter>Generated Files\Debug</Filter>
     </ClCompile>
-    <ClCompile Include="MOC\Release\moc_urLevelEditorMainWindow.cpp">
+    <ClCompile Include="MOC\Release\moc_UrLevelEditorMainWindow.cpp">
       <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="view\UrLevelEditorMainWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\UrLevelEditorApplication.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MOC\Debug\moc_UrLevelEditor.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="MOC\Release\moc_UrLevelEditor.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="infrastructure\UrLevelEditor.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="urleveleditor.ui">
+    <CustomBuild Include="view\urleveleditor.ui">
       <Filter>Form Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="urleveleditor.qrc">
+    <CustomBuild Include="view\UrLevelEditorMainWindow.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="view\urleveleditor.qrc">
       <Filter>Resource Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="urLevelEditorMainWindow.h">
+    <CustomBuild Include="infrastructure\UrLevelEditor.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
   </ItemGroup>
@@ -66,8 +81,8 @@
     <ClInclude Include="GeneratedFiles\ui_urleveleditor.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
+    <ClInclude Include="infrastructure\UrLevelEditorApplication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

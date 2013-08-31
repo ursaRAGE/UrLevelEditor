@@ -1,10 +1,11 @@
-#include "urLevelEditorMainWindow.h"
+// Qt
 #include <QtGui/QApplication>
+
+// ursaRage
+#include "infrastructure/UrLevelEditorApplication.h"
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    UrLevelEditor w;
-    w.show();
+    UrLevelEditorApplication a(argc, argv);
     return a.exec();
 }
