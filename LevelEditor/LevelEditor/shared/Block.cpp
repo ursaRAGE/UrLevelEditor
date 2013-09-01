@@ -3,6 +3,9 @@
 #include "Block.h"
 #include "UrLevelEditorDefines.h"
 
+const char* Block::BLOCK_COLUMN_ATTR = "Column";
+const char* Block::BLOCK_ROW_ATTR = "Row";
+
 Block::Block()
   : Row(0)
   , Column(0)
@@ -30,4 +33,13 @@ void Block::setColumn( const int column )
 {
   Column = column;
   Y = Column * UrsaRage::SPACE_HEIGHT;
+}
+
+void Block::Unmarshall( QDomElement& blockElement )
+{
+  QDomAttr blockRowAttr = blockElement.attributeNode(BLOCK_ROW_ATTR);
+  QDomAttr blockColumnAttr = blockElement.attributeNode(BLOCK_COLUMN_ATTR);
+
+  this->setRow( blockRowAttr.value().toUInt() );
+  this->setColumn( blockColumnAttr.value().toUInt() );
 }

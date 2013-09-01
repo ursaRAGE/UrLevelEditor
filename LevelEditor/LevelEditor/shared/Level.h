@@ -17,6 +17,8 @@ public: // Members
   QString Name;
   unsigned int Id;
   QString Description;
+  unsigned int Column;
+  unsigned int Row;
 
 private: // Constants
   static const char* LEVEL_ID_ATTR;
