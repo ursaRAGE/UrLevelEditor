@@ -12,14 +12,7 @@ public:
 
   virtual QImage image() const;
 
-  void setRow(const int row );
-  void setColumn( const int column );
-
   void Unmarshall( QDomElement& blockElement );
-
-public: // Members
-  unsigned int Row;
-  unsigned int Column;
 
 private:
   QImage image_;

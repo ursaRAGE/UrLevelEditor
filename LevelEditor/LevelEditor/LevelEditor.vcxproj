@@ -224,6 +224,7 @@
   <ItemGroup>
     <None Include="assets\barrel.png" />
     <None Include="assets\block.png" />
+    <None Include="assets\bob01.png" />
     <None Include="levels\level1.xml" />
     <CustomBuild Include="view\UrAssetRenderView.ui">
       <FileType>Document</FileType>

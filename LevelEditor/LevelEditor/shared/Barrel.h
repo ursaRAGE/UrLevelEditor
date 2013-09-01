@@ -22,8 +22,7 @@ public:
   void Unmarshall( QDomElement& barrelElement );
 
 public: // Members
-  unsigned int Row;
-  unsigned int Column;
+
   unsigned float Speed;
   unsigned float Angle;
   bool Auto;

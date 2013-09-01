@@ -5,6 +5,7 @@
 class UrLevelInput;
 class Block;
 class Barrel;
+class Meepo;
 
 class UrAssetModel
 {
@@ -16,6 +17,8 @@ public:
 
   QList<Block*> blocks() const;
   QList<Barrel*> barrels() const;
+
+  Meepo* meepo() const;
 
 private:
   UrLevelInput* inputLevel_;

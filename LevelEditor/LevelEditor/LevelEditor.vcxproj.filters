@@ -182,5 +182,6 @@
     <None Include="assets\barrel.png" />
     <None Include="assets\block.png" />
     <None Include="levels\level1.xml" />
+    <None Include="assets\bob01.png" />
   </ItemGroup>
 </Project>

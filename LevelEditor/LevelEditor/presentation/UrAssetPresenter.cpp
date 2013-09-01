@@ -5,6 +5,7 @@
 #include "shared/UrAsset.h"
 #include "shared/Block.h"
 #include "shared/Barrel.h"
+#include "shared/Meepo.h"
 #include <QList>
 
 UrAssetPresenter::UrAssetPresenter(UrAssetModel* model, UrRenderScene* view, QObject *parent)
@@ -36,5 +37,7 @@ void UrAssetPresenter::reloadAllAssets()
     UrAsset* asset = loadBarrels[index];
     view_->addAsset(asset);
   }
+
+  view_->addAsset(model_->meepo());
 
 }

@@ -12,14 +12,7 @@ public:
 
   virtual QImage image() const;
 
-  void setRow(const int row );
-  void setColumn( const int column );
-
   void Unmarshall( QDomElement& meepoElement );
-
-public: // Members
-  unsigned int StartRow;
-  unsigned int StartColumn;
 
 private:
   QImage meepoImage_;
