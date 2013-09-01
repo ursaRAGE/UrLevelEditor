@@ -186,4 +186,6 @@ Makefile
 *-build-*
 ui_*
 
+*.exe
+
 GeneratedFiles/
