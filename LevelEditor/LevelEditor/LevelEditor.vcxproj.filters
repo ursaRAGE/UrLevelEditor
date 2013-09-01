@@ -95,6 +95,24 @@
     <ClCompile Include="domain\UrAssetModel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MOC\Debug\moc_UrAssetPresenter.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="MOC\Release\moc_UrAssetPresenter.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="presentation\UrAssetPresenter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MOC\Debug\moc_UrAssetRenderView.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="MOC\Release\moc_UrAssetRenderView.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="view\UrAssetRenderView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="view\urleveleditor.ui">
@@ -111,6 +129,15 @@
     </CustomBuild>
     <CustomBuild Include="view\UrRenderScene.h">
       <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="presentation\UrAssetPresenter.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="view\UrAssetRenderView.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="view\UrAssetRenderView.ui">
+      <Filter>Form Files</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
@@ -146,6 +173,9 @@
     </ClInclude>
     <ClInclude Include="domain\UrAssetModel.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_UrAssetRenderView.h">
+      <Filter>Generated Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

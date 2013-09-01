@@ -28,15 +28,21 @@ UrRenderScene::UrRenderScene(QWidget *parent)
 
 UrRenderScene::~UrRenderScene()
 {
-  foreach(UrAsset* asset, assets_)
-  {
-    delete asset;
-  }
+}
+
+void UrRenderScene::clear()
+{
+  assets_.clear();
 }
 
 void UrRenderScene::setGridEnabled( bool enabled )
 {
   gridEnabled_ = enabled;
+}
+
+void UrRenderScene::addAsset( UrAsset* asset )
+{
+  assets_.append(asset);
 }
 
 void UrRenderScene::paintEvent( QPaintEvent* event )

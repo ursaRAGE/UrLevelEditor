@@ -19,10 +19,10 @@ public:
 
     void addAsset( UrAsset* asset );
     void setGridEnabled( bool enabled );
+    void clear();
 
 protected:
     void paintEvent( QPaintEvent* event );
-
 private: // Members
     QList<UrAsset*> assets_;
 

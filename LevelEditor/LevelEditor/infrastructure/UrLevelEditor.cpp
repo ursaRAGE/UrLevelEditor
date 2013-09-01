@@ -3,6 +3,9 @@
 #include "view/UrLevelEditorMainWindow.h"
 #include "view/UrRenderScene.h"
 #include "domain/UrAssetModel.h"
+#include "presentation/UrAssetPresenter.h"
+#include "view\UrAssetRenderView.h"
+
 
 UrLevelEditor::UrLevelEditor(QObject *parent)
  : QObject(parent)
@@ -15,12 +18,13 @@ UrLevelEditor::UrLevelEditor(QObject *parent)
 
 UrLevelEditor::~UrLevelEditor()
 {
+  delete assetPresenter_;
+  delete assetModel_;
   delete mainWindow_;
 }
 
 void UrLevelEditor::constructInfrastructure()
 {
-
 }
 
 void UrLevelEditor::constructDomain()
@@ -32,12 +36,12 @@ void UrLevelEditor::constructDomain()
 void UrLevelEditor::constructView()
 {
   mainWindow_ = new UrLevelEditorMainWindow();
-  levelRenderScene_ = new UrRenderScene();
-  mainWindow_->setCentralWidget(levelRenderScene_);
+  assetRenderView_ = new UrAssetRenderView();
+  mainWindow_->setCentralWidget(assetRenderView_);
   mainWindow_->show();
 }
 
 void UrLevelEditor::constructPresentation()
 {
-
+  assetPresenter_ = new UrAssetPresenter(assetModel_, assetRenderView_->renderSceneWidget());
 }
