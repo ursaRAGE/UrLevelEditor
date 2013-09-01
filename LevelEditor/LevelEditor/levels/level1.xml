@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Level Id="1" Name="FirstLeveL">
+  <Description>The very first level ever.</Description>
+  <Size Columns="10" Rows="10"/>
+  <Meepo StartColumn="3" StartRow="1"/> 
+  <Blocks>
+    <Block Column="0" Row="0"/>
+    <Block Column="1" Row="0"/>
+    <Block Column="2" Row="0"/>
+    <Block Column="3" Row="0"/>
+    <Block Column="4" Row="0"/>
+  </Blocks>
+  <Barrels>
+    <Barrel Column="0" Row="1" Speed="0.15" Angle="90.0" Auto="True"/>
+    <Barrel Column="1" Row="1" Speed="0.15" Angle="90.0" Auto="False"/>
+  </Barrels>
+</Level>

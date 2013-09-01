@@ -90,6 +90,9 @@
     <ClCompile Include="MOC\Debug\moc_UrLevelEditorMainWindow.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="MOC\Debug\moc_UrRenderScene.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="MOC\Release\moc_UrLevelEditor.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -98,6 +101,18 @@
     </ClCompile>
     <ClCompile Include="infrastructure\UrLevelEditorApplication.cpp" />
     <ClCompile Include="infrastructure\UrLevelEditor.cpp" />
+    <ClCompile Include="MOC\Release\moc_UrRenderScene.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="shared\Barrel.cpp" />
+    <ClCompile Include="shared\Block.cpp" />
+    <ClCompile Include="shared\Level.cpp" />
+    <ClCompile Include="shared\Meepo.cpp" />
+    <ClCompile Include="shared\UrAsset.cpp" />
+    <ClCompile Include="domain\UrLevelInput.cpp" />
+    <ClCompile Include="domain\UrXmlLevelInput.cpp" />
+    <ClCompile Include="domain\UrAssetModel.cpp" />
+    <ClCompile Include="view\UrRenderScene.cpp" />
     <ClCompile Include="view\UrLevelEditorMainWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -128,6 +143,25 @@
   <ItemGroup>
     <ClInclude Include="GeneratedFiles\ui_urleveleditor.h" />
     <ClInclude Include="infrastructure\UrLevelEditorApplication.h" />
+    <ClInclude Include="shared\Barrel.h" />
+    <ClInclude Include="shared\Block.h" />
+    <ClInclude Include="shared\Level.h" />
+    <ClInclude Include="shared\Meepo.h" />
+    <ClInclude Include="shared\UrAsset.h" />
+    <ClInclude Include="shared\UrLevelEditorDefines.h" />
+    <ClInclude Include="domain\UrLevelInput.h" />
+    <ClInclude Include="domain\UrXmlLevelInput.h" />
+    <ClInclude Include="domain\UrAssetModel.h" />
+    <CustomBuild Include="view\UrRenderScene.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing UrRenderScene.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\MOC\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\MOC\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_CORE_LIB -DQT_GUI_LIB -DQT_XML_LIB -DQT_SQL_LIB -DQT_OPENGL_LIB -DQT_XMLPATTERNS_LIB "-I." "-I.\GeneratedFiles" "-I$(QTDIR)\include" "-I.\MOC\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtXmlPatterns" "-I." "-I." "-I." "-I."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing UrRenderScene.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\MOC\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\MOC\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_XML_LIB -DQT_SQL_LIB -DQT_OPENGL_LIB -DQT_XMLPATTERNS_LIB "-I." "-I.\GeneratedFiles" "-I$(QTDIR)\include" "-I.\MOC\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtXmlPatterns" "-I." "-I." "-I." "-I."</Command>
+    </CustomBuild>
     <CustomBuild Include="infrastructure\UrLevelEditor.h">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing UrLevelEditor.h...</Message>
@@ -151,6 +185,11 @@
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
     </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\barrel.png" />
+    <None Include="assets\block.png" />
+    <None Include="levels\level1.xml" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

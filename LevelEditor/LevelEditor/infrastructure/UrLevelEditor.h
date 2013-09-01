@@ -6,6 +6,8 @@
 
 // ursaRage
 class UrLevelEditorMainWindow;
+class UrRenderScene;
+class UrAssetModel;
 
 class UrLevelEditor : public QObject
 {
@@ -26,8 +28,10 @@ private: // Members
   
   // View
   UrLevelEditorMainWindow* mainWindow_;
+  UrRenderScene* levelRenderScene_;
 
   // Model
+  UrAssetModel* assetModel_;
 
   // Presentation
 
