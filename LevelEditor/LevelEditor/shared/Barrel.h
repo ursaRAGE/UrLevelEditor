@@ -19,14 +19,22 @@ public:
   void setRow(const int row );
   void setColumn( const int column );
 
-  void Unmarshall( const QDomElement& levelElement );
+  void Unmarshall( QDomElement& barrelElement );
 
 public: // Members
   unsigned int Row;
   unsigned int Column;
+  unsigned float Speed;
+  unsigned float Angle;
+  bool Auto;
 
 private: 
   QImage image_;
+  static const char* BARREL_COLUMN_ATTR;
+  static const char* BARREL_ROW_ATTR;
+  static const char* BARREL_SPEED_ATTR;
+  static const char* BARREL_ANGLE_ATTR;
+  static const char* BARREL_AUTO_ATTR;
 };
 
 #endif // BARREL_H

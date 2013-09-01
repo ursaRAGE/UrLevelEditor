@@ -11,6 +11,8 @@ const char* Level::LEVEL_SIZE_ROW_ATTR = "Row";
 
 Level::Level()
   : Id(-1)
+  , Column(0)
+  , Row(0)
 {
 }
 
@@ -32,8 +34,7 @@ void Level::Unmarshall( QDomElement& levelElement )
   Id = idAttr.value().toUInt();
   Name = nameAttr.value();
   Description = descriptionElement.text();
-
-  // TODO: Shinichi implement the remainder
-
+  Row = sizeRowAttr.value().toUInt();
+  Column = sizeColumnAttr.value().toUInt();
 }
 

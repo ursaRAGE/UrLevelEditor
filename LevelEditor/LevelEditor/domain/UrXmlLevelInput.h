@@ -24,8 +24,9 @@ private: // Constants
   static const char* LEVEL_TAG;
 
   static const char* MEEPO_TAG;
-  static const char* MEEPO_START_COLUMN_ATTR;
-  static const char* MEEPO_START_ROW_ATTR;
+
+  static const char* BLOCKS_TAG;
+  static const char* BLOCK_TAG;
 
   static const char* BARRELS_TAG;
   static const char* BARREL_TAG;

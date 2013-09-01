@@ -11,11 +11,12 @@ const char* UrXmlLevelInput::LEVEL_TAG = "Level";
 
 
 const char* UrXmlLevelInput::MEEPO_TAG = "Meepo";
-const char* UrXmlLevelInput::MEEPO_START_COLUMN_ATTR = "Column"; // MOVE TO MEEPO CLASS
-const char* UrXmlLevelInput::MEEPO_START_ROW_ATTR = "Row";
 
 const char* UrXmlLevelInput::BARRELS_TAG = "Barrels";
 const char* UrXmlLevelInput::BARREL_TAG = "Barrel"; 
+
+const char* UrXmlLevelInput::BLOCKS_TAG = "Blocks";
+const char* UrXmlLevelInput::BLOCK_TAG = "Block";
 
 
 UrXmlLevelInput::UrXmlLevelInput()
@@ -64,6 +65,20 @@ void UrXmlLevelInput::LoadMeepo( const QDomElement& levelElement )
 
 void UrXmlLevelInput::LoadBlocks( const QDomElement& levelElement )
 {
+  QDomElement blocksElements = levelElement.firstChildElement(BLOCKS_TAG);
+  QDomNodeList blocksNodes = blocksElements.elementsByTagName(BLOCK_TAG);
+
+  for(int index = 0; index < blocksNodes.size(); index++)
+  {
+    QDomElement blockElement = blocksNodes.at(index).toElement();
+    Block* newBlock = new Block();
+    newBlock->Unmarshall(blockElement);
+    UrLevelInput::addBlock(newBlock);
+  }
+}
+
+void UrXmlLevelInput::LoadBarrels( const QDomElement& levelElement)
+{
   QDomElement barrelsElements = levelElement.firstChildElement(BARRELS_TAG);
   QDomNodeList barrelsNodes = barrelsElements.elementsByTagName(BARREL_TAG);
 
@@ -74,9 +89,4 @@ void UrXmlLevelInput::LoadBlocks( const QDomElement& levelElement )
     newBarrel->Unmarshall(barrelElement);
     UrLevelInput::addBarrel(newBarrel);
   }
-}
-
-void UrXmlLevelInput::LoadBarrels( const QDomElement& levelElement)
-{
-
 }

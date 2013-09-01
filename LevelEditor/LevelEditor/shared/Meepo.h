@@ -23,6 +23,9 @@ public: // Members
 
 private:
   QImage meepoImage_;
+  static const char* MEEPO_START_COLUMN_ATTR;
+  static const char* MEEPO_START_ROW_ATTR;
+
 };
 
 #endif // MEEPO_H
