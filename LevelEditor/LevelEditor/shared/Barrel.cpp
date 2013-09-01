@@ -5,7 +5,7 @@ Barrel::Barrel()
   : Row(0)
   , Column(0)
 {
-  image_ = QImage("LevelEditor/assets/barrel.png");
+  image_ = QImage("assets/barrel.png");
 }
 
 Barrel::~Barrel()

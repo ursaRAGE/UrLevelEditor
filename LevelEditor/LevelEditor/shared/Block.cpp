@@ -7,7 +7,7 @@ Block::Block()
   : Row(0)
   , Column(0)
 {
-  image_ = QImage("LevelEditor/assets/block.png");
+  image_ = QImage("assets/block.png");
 }
 
 Block::~Block()

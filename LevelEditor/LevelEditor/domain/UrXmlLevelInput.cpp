@@ -41,7 +41,10 @@ void UrXmlLevelInput::loadInputFile( const QString& filename )
 
 void UrXmlLevelInput::LoadLevel()
 {
-  QDomElement levelElement = document_->documentElement().firstChildElement(LEVEL_TAG);
+  // The documentElement is the very first tag which is <Level></Level>.
+  QDomElement levelElement = document_->documentElement();  
+  if( levelElement.isNull() )
+    return;
   Level* level = new Level();
   level->Unmarshall(levelElement);
   UrLevelInput::setLevel(level);

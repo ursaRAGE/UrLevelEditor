@@ -14,5 +14,5 @@ UrAssetModel::~UrAssetModel()
 
 void UrAssetModel::LoadTestInputFile()
 {
-  inputLevel_->loadInputFile("LevelEditor/levels/level1.xml");
+  inputLevel_->loadInputFile("levels/level1.xml");
 }
