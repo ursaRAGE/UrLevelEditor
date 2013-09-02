@@ -17,7 +17,7 @@ UrAssetModel::~UrAssetModel()
 
 void UrAssetModel::LoadTestInputFile()
 {
-  inputLevel_->loadInputFile("levels/level1.xml");
+  inputLevel_->loadInputFile("levels/demolevel.xml");
 }
 
 QList<Block*> UrAssetModel::blocks() const
