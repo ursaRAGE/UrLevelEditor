@@ -3,7 +3,9 @@
 
 #include <QWidget>
 #include "ui_UrAssetRenderView.h"
+
 class UrRenderScene;
+class UrAsset;
 
 class UrAssetRenderView : public QWidget
 {
@@ -14,6 +16,8 @@ public:
     ~UrAssetRenderView();
     
     UrRenderScene* renderSceneWidget() const;
+    void addAssetToLevel( UrAsset* asset );
+    void clear();
 
 private:
     Ui::UrAssetRenderView ui;

@@ -2,7 +2,7 @@
 #define URMEEPOPROPERTIESWIDGET_H
 
 #include <QWidget>
-#include "ui_oUrMeepoPropertiesWidget.h"
+#include "ui_UrMeepoPropertiesWidget.h"
 
 class UrMeepoPropertiesWidget : public QWidget
 {

@@ -12,8 +12,12 @@ public:
     UrLevelEditorMainWindow(QWidget *parent = 0, Qt::WFlags flags = 0);
     ~UrLevelEditorMainWindow();
 
+    QToolBar* assetToolBar();
+
 private:
     Ui::UrLevelEditorClass ui;
+
+    QToolBar* assetToolBar_;
 };
 
 #endif // URLEVELEDITOR_H

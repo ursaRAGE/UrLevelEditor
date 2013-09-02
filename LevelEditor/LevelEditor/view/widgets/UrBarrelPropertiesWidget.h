@@ -2,7 +2,7 @@
 #define URBARRELPROPERTIESWIDGET_H
 
 #include <QWidget>
-#include "ui_UrBararelPropertiesWidget.h"
+#include "ui_UrBarrelPropertiesWidget.h"
 
 class UrBarrelPropertiesWidget : public QWidget
 {

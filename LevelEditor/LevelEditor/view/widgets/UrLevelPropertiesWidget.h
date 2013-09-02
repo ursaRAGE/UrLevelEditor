@@ -2,7 +2,7 @@
 #define URLEVELPROPERTIESWIDGET_H
 
 #include <QWidget>
-#include "ui_UrLeveaaaaaaaaaaalPropertiesWidget.h"
+#include "ui_UrLevelPropertiesWidget.h"
 
 class UrLevelPropertiesWidget : public QWidget
 {

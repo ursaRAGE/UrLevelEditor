@@ -1,10 +1,10 @@
 // ursaRage
 #include "UrLevelEditor.h"
 #include "view/UrLevelEditorMainWindow.h"
-#include "view/UrRenderScene.h"
 #include "domain/UrAssetModel.h"
 #include "presentation/UrAssetPresenter.h"
 #include "view\UrAssetRenderView.h"
+#include "view/UrAssetPropertiesView.h"
 
 
 UrLevelEditor::UrLevelEditor(QObject *parent)
@@ -39,9 +39,11 @@ void UrLevelEditor::constructView()
   assetRenderView_ = new UrAssetRenderView();
   mainWindow_->setCentralWidget(assetRenderView_);
   mainWindow_->show();
+
+  assetPropertiesView_ = new UrAssetPropertiesView(mainWindow_->assetToolBar());
 }
 
 void UrLevelEditor::constructPresentation()
 {
-  assetPresenter_ = new UrAssetPresenter(assetModel_, assetRenderView_->renderSceneWidget());
+  assetPresenter_ = new UrAssetPresenter(assetModel_, assetRenderView_);
 }

@@ -4,20 +4,20 @@
 #include <QObject>
 
 class UrAssetModel;
-class UrRenderScene;
+class UrAssetRenderView;
 
 class UrAssetPresenter : public QObject
 {
  Q_OBJECT
 
 public:
-    explicit UrAssetPresenter(UrAssetModel* model, UrRenderScene* view, QObject *parent = NULL);
+    explicit UrAssetPresenter(UrAssetModel* model, UrAssetRenderView* view, QObject *parent = NULL);
     ~UrAssetPresenter();
     void reloadAllAssets();
 
 private:
     UrAssetModel* model_;
-    UrRenderScene* view_;
+    UrAssetRenderView* view_;
 };
 
 #endif // URASSETPRESENTER_H

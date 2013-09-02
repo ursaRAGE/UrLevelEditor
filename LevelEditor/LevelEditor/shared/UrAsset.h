@@ -17,7 +17,7 @@ public: // Members
   unsigned int X;
   unsigned int Y;
 
-protected:
+public:
   unsigned int Row;
   unsigned int Column;
 };
