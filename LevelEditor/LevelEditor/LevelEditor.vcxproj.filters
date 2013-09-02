@@ -68,6 +68,9 @@
     <ClCompile Include="MOC\Release\moc_UrRenderScene.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
+    <ClCompile Include="view\UrRenderScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="shared\UrAsset.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -110,13 +113,13 @@
     <ClCompile Include="view\UrAssetRenderView.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MOC\Debug\moc_UrAssetPropertiesView.cpp">
+    <ClCompile Include="MOC\Debug\moc_UrMeepoPropertiesWidget.cpp">
       <Filter>Generated Files\Debug</Filter>
     </ClCompile>
-    <ClCompile Include="MOC\Release\moc_UrAssetPropertiesView.cpp">
+    <ClCompile Include="MOC\Release\moc_UrMeepoPropertiesWidget.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="view\UrAssetPropertiesView.cpp">
+    <ClCompile Include="view\UrMeepoPropertiesWidget.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="MOC\Debug\moc_UrBarrelPropertiesWidget.cpp">
@@ -125,11 +128,17 @@
     <ClCompile Include="MOC\Release\moc_UrBarrelPropertiesWidget.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
+    <ClCompile Include="view\UrBarrelPropertiesWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="MOC\Debug\moc_UrBlockPropertiesWidget.cpp">
       <Filter>Generated Files\Debug</Filter>
     </ClCompile>
     <ClCompile Include="MOC\Release\moc_UrBlockPropertiesWidget.cpp">
       <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="view\UrBlockPropertiesWidget.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="MOC\Debug\moc_UrLevelPropertiesWidget.cpp">
       <Filter>Generated Files\Debug</Filter>
@@ -137,25 +146,7 @@
     <ClCompile Include="MOC\Release\moc_UrLevelPropertiesWidget.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="MOC\Debug\moc_UrMeepoPropertiesWidget.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="MOC\Release\moc_UrMeepoPropertiesWidget.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="view\widgets\UrBarrelPropertiesWidget.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="view\widgets\UrBlockPropertiesWidget.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="view\widgets\UrLevelPropertiesWidget.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="view\widgets\UrMeepoPropertiesWidget.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="view\widgets\UrRenderScene.cpp">
+    <ClCompile Include="view\UrLevelPropertiesWidget.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -172,6 +163,9 @@
     <CustomBuild Include="infrastructure\UrLevelEditor.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
+    <CustomBuild Include="view\UrRenderScene.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
     <CustomBuild Include="presentation\UrAssetPresenter.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
@@ -181,37 +175,28 @@
     <CustomBuild Include="view\UrAssetRenderView.ui">
       <Filter>Form Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="view\UrAssetPropertiesView.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="view\UrAssetPropertiesView.ui">
+    <CustomBuild Include="view\UrBarrelPropertiesWidget.ui">
       <Filter>Form Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="view\widgets\UrBarrelPropertiesWidget.ui">
+    <CustomBuild Include="view\UrBlockPropertiesWidget.ui">
       <Filter>Form Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="view\widgets\UrBarrelPropertiesWidget.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="view\widgets\UrBlockPropertiesWidget.ui">
+    <CustomBuild Include="view\UrLevelPropertiesWidget.ui">
       <Filter>Form Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="view\widgets\UrBlockPropertiesWidget.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="view\widgets\UrLevelPropertiesWidget.ui">
+    <CustomBuild Include="view\UrMeepoPropertiesWidget.ui">
       <Filter>Form Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="view\widgets\UrLevelPropertiesWidget.h">
+    <CustomBuild Include="view\UrMeepoPropertiesWidget.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="view\widgets\UrMeepoPropertiesWidget.ui">
-      <Filter>Form Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="view\widgets\UrMeepoPropertiesWidget.h">
+    <CustomBuild Include="view\UrBarrelPropertiesWidget.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="view\widgets\UrRenderScene.h">
+    <CustomBuild Include="view\UrBlockPropertiesWidget.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="view\UrLevelPropertiesWidget.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
   </ItemGroup>
@@ -252,19 +237,16 @@
     <ClInclude Include="GeneratedFiles\ui_UrAssetRenderView.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_UrAssetPropertiesView.h">
+    <ClInclude Include="GeneratedFiles\ui_UrBarrelPropertiesWidget.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
     <ClInclude Include="GeneratedFiles\ui_UrBlockPropertiesWidget.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_UrBarrelPropertiesWidget.h">
+    <ClInclude Include="GeneratedFiles\ui_UrLevelPropertiesWidget.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
     <ClInclude Include="GeneratedFiles\ui_UrMeepoPropertiesWidget.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_UrLevelPropertiesWidget.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -273,5 +255,6 @@
     <None Include="assets\block.png" />
     <None Include="levels\level1.xml" />
     <None Include="assets\bob01.png" />
+    <None Include="levels\demolevel.xml" />
   </ItemGroup>
 </Project>

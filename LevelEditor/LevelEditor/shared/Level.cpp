@@ -6,8 +6,8 @@ const char* Level::LEVEL_ID_ATTR = "Id";
 const char* Level::LEVEL_NAME_ATTR = "Name";
 const char* Level::LEVEL_DESCRIPTION_TAG = "Description";
 const char* Level::LEVEL_SIZE_TAG = "Size";
-const char* Level::LEVEL_SIZE_COLUMN_ATTR = "Column";
-const char* Level::LEVEL_SIZE_ROW_ATTR = "Row";
+const char* Level::LEVEL_SIZE_COLUMN_ATTR = "Columns";
+const char* Level::LEVEL_SIZE_ROW_ATTR = "Rows";
 
 Level::Level()
   : Id(-1)

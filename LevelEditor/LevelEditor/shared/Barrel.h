@@ -24,7 +24,9 @@ public:
 public: // Members
 
   unsigned float Speed;
-  unsigned float Angle;
+  unsigned float StartingAngle;
+  unsigned float RotationAngle;
+  unsigned float Delay;
   bool Auto;
 
 private: 
@@ -32,7 +34,9 @@ private:
   static const char* BARREL_COLUMN_ATTR;
   static const char* BARREL_ROW_ATTR;
   static const char* BARREL_SPEED_ATTR;
-  static const char* BARREL_ANGLE_ATTR;
+  static const char* BARREL_STARTING_ANGLE_ATTR;
+  static const char* BARREL_ROTATION_ANGLE_ATTR;
+  static const char* BARREL_DELAY_ATTR;
   static const char* BARREL_AUTO_ATTR;
 };
 

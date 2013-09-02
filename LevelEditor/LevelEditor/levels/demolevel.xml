@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Level Id="0" Name="DemoLevel">
+  <Description>Demo!</Description>
+  <Size Columns="16" Rows="16"/>
+  <Meepo StartColumn ="1" StartRow="1"/>
+  <Blocks>
+    <Block Column="1" Row="0"/>
+    <Block Column="2" Row="0"/>
+    <Block Column="3" Row="0"/>
+    <Block Column="3" Row="1"/>
+    <Block Column="5" Row="0"/>
+    <Block Column="6" Row="0"/>
+    <Block Column="8" Row="0"/>
+    <Block Column="9" Row="0"/>
+    <Block Column="13" Row="2"/>
+    <Block Column="13" Row="4"/>
+    <Block Column="13" Row="6"/>
+    <Block Column="13" Row="8"/>
+    <Block Column="13" Row="10"/>
+    <Block Column="13" Row="11"/>
+    <Block Column="13" Row="12"/>
+    <Block Column="13" Row="13"/>
+    <Block Column="8" Row="11"/>
+    <Block Column="9" Row="11"/>
+    <Block Column="10" Row="11"/>
+    <Block Column="11" Row="11"/>
+    <Block Column="12" Row="11"/>
+    <Block Column="7" Row="12"/>
+    <Block Column="8" Row="12"/>
+    <Block Column="2" Row="13"/>
+    <Block Column="3" Row="13"/>
+    <Block Column="4" Row="13"/>
+    <Block Column="5" Row="13"/>
+    <Block Column="6" Row="13"/>
+    <Block Column="7" Row="13"/>
+    <Block Column="10" Row="13"/>
+    <Block Column="10" Row="14"/>
+  </Blocks>
+  <Barrels>
+    <Barrel Column="10" Row="0" Speed="0.15" StartingAngle="0.0" RotationAngle="90.0" Delay="0.4" Auto="True"/>
+    <Barrel Column="14" Row="0" Speed="0.15" StartingAngle="-90.0" RotationAngle="90.0" Delay="0.3" Auto="True"/>
+    <Barrel Column="14" Row="3" Speed="0.2" StartingAngle="-180.0" RotationAngle="90.0" Delay="0.2" Auto="True"/>
+    <Barrel Column="12" Row="3" Speed="0.2" StartingAngle="90.0" RotationAngle="-90.0" Delay="0.2" Auto="True"/>
+    <Barrel Column="12" Row="9" Speed="0.3" StartingAngle="180.0" RotationAngle="-90.0" Delay="0.2" Auto="True"/>
+    <Barrel Column="14" Row="9" Speed="0.3" StartingAngle="-90.0" RotationAngle="90.0" Delay="0.2" Auto="True"/>
+    <Barrel Column="14" Row="14" Speed="0.3" StartingAngle="-180.0" RotationAngle="90.0" Delay="0.2" Auto="True"/>
+
+    <Barrel Column="1" Row="13" Speed="0.3" StartingAngle="0.0" RotationAngle="180.0" Delay="1.2" Auto="True"/>
+    <Barrel Column="1" Row="8" Speed="0.3" StartingAngle="0.0" RotationAngle="45.0" Delay="0.25" Auto="True"/>
+    <Barrel Column="5" Row="12" Speed="0.3" StartingAngle="225.0" RotationAngle="-90.0" Delay="0.25" Auto="True"/>
+    <Barrel Column="9" Row="8" Speed="0.3" StartingAngle="-45.0" RotationAngle="-135.0" Delay="0.25" Auto="True"/>
+    <Barrel Column="9" Row="6" Speed="0.3" StartingAngle="0.0" RotationAngle="-135.0" Delay="0.25" Auto="True"/>
+  </Barrels>
+</Level>
