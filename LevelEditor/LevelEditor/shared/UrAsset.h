@@ -6,7 +6,7 @@
 class UrAsset
 {
 public:
-  UrAsset();
+  explicit UrAsset(int id);
   virtual ~UrAsset();
   virtual QImage image() const = 0;
 
@@ -15,6 +15,8 @@ public:
 
   bool isPointTouching(const QPoint& point );
 
+  int id() const;
+
 public: // Members
   unsigned int X;
   unsigned int Y;
@@ -22,6 +24,9 @@ public: // Members
 public:
   unsigned int Row;
   unsigned int Column;
+
+private:
+  unsigned int unqueId_;
 };
 
 #endif //UR_ASSET_H

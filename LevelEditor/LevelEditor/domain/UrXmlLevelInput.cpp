@@ -58,7 +58,7 @@ void UrXmlLevelInput::LoadLevel()
 void UrXmlLevelInput::LoadMeepo( const QDomElement& levelElement )
 {
   QDomElement meepoElement = levelElement.firstChildElement(MEEPO_TAG);
-  Meepo* meepo = new Meepo();
+  Meepo* meepo = new Meepo(UrLevelInput::uniqueId());
   meepo->Unmarshall(meepoElement);
   UrLevelInput::setMeepo(meepo);
 }
@@ -71,7 +71,7 @@ void UrXmlLevelInput::LoadBlocks( const QDomElement& levelElement )
   for(int index = 0; index < blocksNodes.size(); index++)
   {
     QDomElement blockElement = blocksNodes.at(index).toElement();
-    Block* newBlock = new Block();
+    Block* newBlock = new Block(UrLevelInput::uniqueId());
     newBlock->Unmarshall(blockElement);
     UrLevelInput::addBlock(newBlock);
   }
@@ -85,7 +85,7 @@ void UrXmlLevelInput::LoadBarrels( const QDomElement& levelElement)
   for(int index = 0; index < barrelsNodes.size(); index++)
   {
     QDomElement barrelElement = barrelsNodes.at(index).toElement();
-    Barrel* newBarrel = new Barrel();
+    Barrel* newBarrel = new Barrel(UrLevelInput::uniqueId());
     newBarrel->Unmarshall(barrelElement);
     UrLevelInput::addBarrel(newBarrel);
   }

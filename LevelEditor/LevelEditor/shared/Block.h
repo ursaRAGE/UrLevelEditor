@@ -7,7 +7,7 @@
 class Block : public UrAsset
 {
 public:
-  Block();
+  explicit Block(int id);
   virtual ~Block();
 
   virtual QImage image() const;

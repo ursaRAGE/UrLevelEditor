@@ -28,11 +28,15 @@ public:
   void setMeepo( Meepo* meepo );
   void addBarrel( Barrel* barrel );
 
+  int uniqueId();
+
 private:
   Level* level_;
   QList<Block*> blocks_;
   QList<Barrel*> barrels_;
   Meepo* meepo_;
+
+  int uniqueIdCounter_;
 };
 
 #endif

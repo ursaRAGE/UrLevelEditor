@@ -2,6 +2,7 @@
 #include "UrLevelInput.h"
 
 UrLevelInput::UrLevelInput()
+  : uniqueIdCounter_(1)
 {
 }
 
@@ -48,6 +49,12 @@ void UrLevelInput::setMeepo( Meepo* meepo )
 void UrLevelInput::addBarrel( Barrel* barrel )
 {
   barrels_.append(barrel);
+}
+
+int UrLevelInput::uniqueId()
+{
+  uniqueIdCounter_++;
+  return uniqueIdCounter_;
 }
 
 

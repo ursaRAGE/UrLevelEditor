@@ -26,12 +26,13 @@ protected:
     void paintEvent( QPaintEvent* event );
 
     void mousePressEvent( QMouseEvent* event );
-
+    void mouseMoveEvent( QMouseEvent* event );
 
 private: // Members
     QList<UrAsset*> assets_;
 
     bool gridEnabled_;
+    QPoint lastPoint_;
 };
 
 #endif // UR_RENDER_SCENE_H

@@ -7,7 +7,8 @@ const char* Meepo::MEEPO_START_COLUMN_ATTR = "StartColumn";
 const char* Meepo::MEEPO_START_ROW_ATTR = "StartRow";
 
 
-Meepo::Meepo()
+Meepo::Meepo( int id )
+  : UrAsset(id)
 {
   meepoImage_ = QImage("assets/bob01.png");
 }

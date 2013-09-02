@@ -11,7 +11,7 @@
 class Barrel : public UrAsset
 {
 public:
-  Barrel();
+  explicit Barrel(int id);
   virtual ~Barrel();
 
   virtual QImage image() const;
@@ -23,10 +23,10 @@ public:
 
 public: // Members
 
-  unsigned float Speed;
-  unsigned float StartingAngle;
-  unsigned float RotationAngle;
-  unsigned float Delay;
+  double Speed;
+  double StartingAngle;
+  double RotationAngle;
+  double Delay;
   bool Auto;
 
 private: 

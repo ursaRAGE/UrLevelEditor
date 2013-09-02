@@ -6,7 +6,8 @@
 const char* Block::BLOCK_COLUMN_ATTR = "Column";
 const char* Block::BLOCK_ROW_ATTR = "Row";
 
-Block::Block()
+Block::Block(int id)
+  : UrAsset(id)
 {
   image_ = QImage("assets/block.png");
 }
@@ -14,7 +15,6 @@ Block::Block()
 Block::~Block()
 {
 }
-
 
 QImage Block::image() const
 {

@@ -14,13 +14,6 @@ UrRenderScene::UrRenderScene(QWidget *parent)
  : QWidget(parent)
  , gridEnabled_(true)
 {
-  UrAsset* asset = new Barrel();
-  Block* blockAsset = new Block();
-  blockAsset->setColumn(3);
-  blockAsset->setRow(4);
-  assets_.append(asset);
-  assets_.append(blockAsset);
-
   QPalette pal = this->palette();
   pal.setColor(this->backgroundRole(), Qt::blue);
   this->setPalette(pal);
@@ -77,10 +70,23 @@ void UrRenderScene::mousePressEvent( QMouseEvent* event )
   {
     if(asset->isPointTouching(event->pos()))
     {
-      printf("OMG I PRESSED IT");
-      asset->X = event->pos().x();
-      asset->Y = event->pos().y();
+      
+    }
+  }
+  lastPoint_ = event->pos();
+}
+
+void UrRenderScene::mouseMoveEvent( QMouseEvent* event )
+{
+  foreach(UrAsset* asset, assets_)
+  {
+    if(asset->isPointTouching(event->pos()))
+    {
+      asset->X += (event->pos().x() - lastPoint_.x());
+      asset->Y += (event->pos().y() - lastPoint_.y());
       update();
     }
   }
+
+  lastPoint_ = event->pos();
 }

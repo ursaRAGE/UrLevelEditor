@@ -2,17 +2,23 @@
 
 #include "UrLevelEditorDefines.h"
 
-UrAsset::UrAsset()
+UrAsset::UrAsset(int id)
   :X(0)
   ,Y(0)
   ,Row(0)
   ,Column(0)
+  ,unqueId_(id)
 {
 }
 
 
 UrAsset::~UrAsset()
 {
+}
+
+int UrAsset::id() const
+{
+  return unqueId_;
 }
 
 void UrAsset::setRow( const unsigned int row )

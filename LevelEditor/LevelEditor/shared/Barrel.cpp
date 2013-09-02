@@ -9,8 +9,9 @@ const char* Barrel::BARREL_ROTATION_ANGLE_ATTR = "RotationAngle";
 const char* Barrel::BARREL_DELAY_ATTR = "Delay";
 const char* Barrel::BARREL_AUTO_ATTR = "Auto";
 
-Barrel::Barrel()
-  : Speed(0.0)
+Barrel::Barrel(int id)
+  : UrAsset(id)
+  , Speed(0.0)
   , StartingAngle(0.0)
   , RotationAngle(0.0)
   , Delay(0.0)

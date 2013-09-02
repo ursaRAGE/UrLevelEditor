@@ -7,7 +7,7 @@
 class Meepo : public UrAsset
 {
 public:
-  Meepo();
+  explicit Meepo( int id );
   virtual ~Meepo();
 
   virtual QImage image() const;
