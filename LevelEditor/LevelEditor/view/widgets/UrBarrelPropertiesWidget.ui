@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>254</width>
-    <height>128</height>
+    <width>503</width>
+    <height>481</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -28,7 +28,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="WBarrelRowSpinBox"/>
+          <widget class="QSpinBox" name="wBarrelRowSpinBox"/>
          </item>
         </layout>
        </item>
@@ -42,7 +42,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="WBarrelColumnSpinBox"/>
+          <widget class="QSpinBox" name="wBarrelColumnSpinBox"/>
          </item>
         </layout>
        </item>
@@ -58,26 +58,58 @@
         </widget>
        </item>
        <item>
-        <widget class="QDoubleSpinBox" name="WSpeedDoubleSpinBox"/>
+        <widget class="QDoubleSpinBox" name="wSpeedDoubleSpinBox"/>
        </item>
       </layout>
      </item>
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <layout class="QHBoxLayout" name="horizontalLayout_7">
        <item>
-        <widget class="QLabel" name="label_4">
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <item>
+          <widget class="QLabel" name="label_4">
+           <property name="text">
+            <string>Starting Angel:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="wStartingAngleDoubleSpinBox"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <item>
+          <widget class="QLabel" name="label_6">
+           <property name="text">
+            <string>Rotation Angle:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="wRotationAngleDoubleSpinBox"/>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_8">
+       <item>
+        <widget class="QLabel" name="label_7">
          <property name="text">
-          <string>Angel:</string>
+          <string>Delay:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QDoubleSpinBox" name="WAngleDoubleSpinBox"/>
+        <widget class="QDoubleSpinBox" name="wDelayDoubleSpinBox"/>
        </item>
       </layout>
      </item>
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_6">
+      <layout class="QHBoxLayout" name="horizontalLayout_9">
        <item>
         <widget class="QLabel" name="label_5">
          <property name="text">
@@ -86,7 +118,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="WBarrelAutoLineEdit"/>
+        <widget class="QLineEdit" name="wBarrelAutoLineEdit"/>
        </item>
       </layout>
      </item>

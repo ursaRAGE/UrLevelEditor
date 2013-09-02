@@ -315,6 +315,7 @@
     <None Include="assets\barrel.png" />
     <None Include="assets\block.png" />
     <None Include="assets\bob01.png" />
+    <None Include="levels\demolevel.xml" />
     <None Include="levels\level1.xml">
       <SubType>Designer</SubType>
     </None>

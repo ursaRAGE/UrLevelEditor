@@ -26,7 +26,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="WIDLineEdit"/>
+        <widget class="QLineEdit" name="wIDLineEdit"/>
        </item>
        <item>
         <widget class="QLabel" name="label">
@@ -36,7 +36,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="WNameLineEdit"/>
+        <widget class="QLineEdit" name="wNameLineEdit"/>
        </item>
       </layout>
      </item>
@@ -58,7 +58,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="WWidthSpinBox"/>
+          <widget class="QSpinBox" name="wWidthSpinBox"/>
          </item>
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_3">
@@ -70,7 +70,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QSpinBox" name="WHeightSpinBox"/>
+            <widget class="QSpinBox" name="wHeightSpinBox"/>
            </item>
           </layout>
          </item>
@@ -79,12 +79,12 @@
        <item>
         <widget class="QLabel" name="label_4">
          <property name="text">
-          <string>Level desicription:</string>
+          <string>Level Desicription:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QTextEdit" name="WDescriptionTextEdit"/>
+        <widget class="QTextEdit" name="wDescriptionTextEdit"/>
        </item>
       </layout>
      </item>

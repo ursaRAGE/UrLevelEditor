@@ -24,7 +24,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QSpinBox" name="WStartRowSpinBox"/>
+      <widget class="QSpinBox" name="wStartRowSpinBox"/>
      </item>
      <item>
       <widget class="QLabel" name="label_2">
@@ -34,7 +34,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QSpinBox" name="WStartColumnSpinBox"/>
+      <widget class="QSpinBox" name="wStartColumnSpinBox"/>
      </item>
     </layout>
    </item>
