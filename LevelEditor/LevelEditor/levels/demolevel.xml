@@ -51,5 +51,10 @@
     <Barrel Column="5" Row="12" Speed="0.3" StartingAngle="225.0" RotationAngle="-90.0" Delay="0.25" Auto="True"/>
     <Barrel Column="9" Row="8" Speed="0.3" StartingAngle="-45.0" RotationAngle="-135.0" Delay="0.25" Auto="True"/>
     <Barrel Column="9" Row="6" Speed="0.3" StartingAngle="0.0" RotationAngle="-135.0" Delay="0.25" Auto="True"/>
+    <Barrel Column="7" Row="4" Speed="0.3" StartingAngle="45.0" RotationAngle="-135.0" Delay="0.25" Auto="True"/>
+    <Barrel Column="5" Row="4" Speed="0.3" StartingAngle="90.0" RotationAngle="-135.0" Delay="0.25" Auto="True"/>
+    <Barrel Column="2" Row="7" Speed="0.3" StartingAngle="135.0" RotationAngle="45.0" Delay="0.25" Auto="True"/>
+
+    <Barrel Column="9" Row="2" Speed="0.2" StartingAngle="0.0" RotationAngle="0.0" Delay="0.0" Auto="False"/>
   </Barrels>
 </Level>
