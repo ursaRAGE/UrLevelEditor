@@ -1,4 +1,5 @@
 // Qt
+#include <QMouseEvent>
 #include <QPainter>
 #include <QPoint>
 #include <QPalette>
@@ -66,6 +67,20 @@ void UrRenderScene::paintEvent( QPaintEvent* event )
     for(int lineY = 0; lineY < this->height(); lineY+=48)
     {
       painter.drawLine(QPoint(0, lineY), QPoint(this->height(), lineY));
+    }
+  }
+}
+
+void UrRenderScene::mousePressEvent( QMouseEvent* event )
+{
+  foreach(UrAsset* asset, assets_)
+  {
+    if(asset->isPointTouching(event->pos()))
+    {
+      printf("OMG I PRESSED IT");
+      asset->X = event->pos().x();
+      asset->Y = event->pos().y();
+      update();
     }
   }
 }

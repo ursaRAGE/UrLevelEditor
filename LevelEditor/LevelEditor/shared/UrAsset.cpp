@@ -26,3 +26,15 @@ void UrAsset::setColumn( const unsigned int column )
   Column = column;
   Y = Column * UrsaRage::SPACE_HEIGHT;
 }
+
+bool UrAsset::isPointTouching( const QPoint& point )
+{
+  if( point.x() >= X && point.x() <= X+ image().width() )
+  {
+    if( point.y() >= Y && point.y() <= Y+ image().height() )
+    {
+      return true;
+    }
+  }
+  return false;
+}

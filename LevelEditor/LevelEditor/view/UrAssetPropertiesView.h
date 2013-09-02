@@ -41,8 +41,6 @@ private:
     UrLevelPropertiesWidget* wLevelPropertiesWidget_;
     UrBlockPropertiesWidget* wBlockPropertiesWidget_;
     UrMeepoPropertiesWidget* wMeepoPropertiesWidget_;
-
-
 };
 
 #endif // URASSETPROPERTIESVIEW_H

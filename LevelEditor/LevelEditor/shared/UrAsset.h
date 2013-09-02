@@ -13,6 +13,8 @@ public:
   void setRow( const unsigned int row );
   void setColumn( const unsigned int column );
 
+  bool isPointTouching(const QPoint& point );
+
 public: // Members
   unsigned int X;
   unsigned int Y;

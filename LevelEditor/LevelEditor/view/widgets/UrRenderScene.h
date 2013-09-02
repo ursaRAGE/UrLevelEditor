@@ -4,6 +4,7 @@
 // Qt
 #include <QWidget>
 
+class QMouseEvent;
 class QPaintEvent;
 
 // ursaRage
@@ -23,6 +24,10 @@ public:
 
 protected:
     void paintEvent( QPaintEvent* event );
+
+    void mousePressEvent( QMouseEvent* event );
+
+
 private: // Members
     QList<UrAsset*> assets_;
 
