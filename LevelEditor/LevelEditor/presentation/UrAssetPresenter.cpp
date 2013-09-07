@@ -6,6 +6,7 @@
 #include "shared/Block.h"
 #include "shared/Barrel.h"
 #include "shared/Meepo.h"
+#include "shared/Level.h"
 #include <QList>
 
 UrAssetPresenter::UrAssetPresenter(UrAssetModel* model, UrAssetRenderView* view, QObject *parent)
@@ -13,14 +14,14 @@ UrAssetPresenter::UrAssetPresenter(UrAssetModel* model, UrAssetRenderView* view,
  , view_(view)
  , QObject(parent)
 {
-  reloadAllAssets();
+  reloadLevel();
 }
 
 UrAssetPresenter::~UrAssetPresenter()
 {
 }
 
-void UrAssetPresenter::reloadAllAssets()
+void UrAssetPresenter::reloadLevel()
 {
   view_->clear();
 
@@ -40,4 +41,8 @@ void UrAssetPresenter::reloadAllAssets()
 
   view_->addAssetToLevel(model_->meepo());
 
+  Level* level = model_->level();
+  const int levelWidth = level->Column * 58;
+  const int levelHeight = level->Row * 58;
+  view_->setLevelSize( levelWidth,levelHeight );
 }

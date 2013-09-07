@@ -12,18 +12,24 @@ public:
 
   void setRow( const unsigned int row );
   void setColumn( const unsigned int column );
+  void setLevelEditorPosition( const QPoint& point );
+  QPoint gamePosition() const;
 
   bool isPointTouching(const QPoint& point );
 
   int id() const;
 
-public: // Members
-  unsigned int X;
-  unsigned int Y;
+  QPoint editorCoordinates();
 
-public:
+public: // Members
+  unsigned int LevelEditorX;
+  unsigned int LevelEditorY;
+
   unsigned int Row;
   unsigned int Column;
+
+protected: 
+  void calculateLevelEditorPosition( const int height );
 
 private:
   unsigned int unqueId_;

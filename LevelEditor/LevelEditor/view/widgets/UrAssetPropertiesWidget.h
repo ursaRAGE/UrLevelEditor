@@ -2,7 +2,7 @@
 #define URASSETPROPERTIESVIEW_H
 
 #include <QWidget>
-#include "ui_UrAssetPropertiesView.h"
+#include "ui_UrAssetPropertiesWidget.h"
 #include <QVBoxLayout>
 
 class Level;
@@ -17,13 +17,13 @@ class UrBlockPropertiesWidget;
 class UrMeepoPropertiesWidget;
 
 #include <QToolBar>
-class UrAssetPropertiesView : public QWidget
+class UrAssetPropertiesWidget : public QWidget
 {
     Q_OBJECT
 
 public:
-    UrAssetPropertiesView(QToolBar* toolbar, QWidget *parent = 0);
-    ~UrAssetPropertiesView();
+    UrAssetPropertiesWidget(QToolBar* toolbar, QWidget *parent = 0);
+    ~UrAssetPropertiesWidget();
 
     void displayLevelProperties(Level* level);
     void displayBarrelProperties(Barrel* barrel);
@@ -31,7 +31,7 @@ public:
     void displayMeepoProperties(Meepo* meepo);
 
 private:
-    Ui::UrAssetPropertiesView ui;
+    Ui::UrAssetPropertiesWidget ui;
 
     QToolBar* assetToolbar_;
 

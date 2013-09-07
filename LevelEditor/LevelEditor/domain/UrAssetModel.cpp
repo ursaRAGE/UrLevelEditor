@@ -4,6 +4,7 @@
 #include "shared/Barrel.h"
 #include "shared/Block.h"
 #include "shared/Meepo.h"
+#include "shared/Level.h"
 
 UrAssetModel::UrAssetModel()
 {
@@ -33,4 +34,9 @@ QList<Barrel*> UrAssetModel::barrels() const
 Meepo* UrAssetModel::meepo() const
 {
   return inputLevel_->meepo();
+}
+
+Level* UrAssetModel::level() const
+{
+  return inputLevel_->level();
 }

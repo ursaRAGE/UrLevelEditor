@@ -3,6 +3,7 @@
 
 #include "UrAsset.h"
 #include <QDomElement>
+class Level;
 
 class Block : public UrAsset
 {
@@ -12,7 +13,7 @@ public:
 
   virtual QImage image() const;
 
-  void Unmarshall( QDomElement& blockElement );
+  void Unmarshall( QDomElement& blockElement, Level* level );
 
 private:
   QImage image_;

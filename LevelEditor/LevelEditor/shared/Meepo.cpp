@@ -2,6 +2,7 @@
 // ursaRage
 #include "Meepo.h"
 #include "UrLevelEditorDefines.h"
+#include "Level.h"
 
 const char* Meepo::MEEPO_START_COLUMN_ATTR = "StartColumn";
 const char* Meepo::MEEPO_START_ROW_ATTR = "StartRow";
@@ -22,11 +23,12 @@ QImage Meepo::image() const
   return meepoImage_;
 }
 
-void Meepo::Unmarshall( QDomElement& meepoElement )
+void Meepo::Unmarshall( QDomElement& meepoElement, Level* level )
 {
   QDomAttr meepoStartColumn = meepoElement.attributeNode(MEEPO_START_COLUMN_ATTR);
   QDomAttr meepoStartRow = meepoElement.attributeNode(MEEPO_START_ROW_ATTR);
 
   UrAsset::setColumn(meepoStartColumn.value().toUInt());
   UrAsset::setRow(meepoStartRow.value().toUInt());
+  UrAsset::calculateLevelEditorPosition(level->Row);
 }

@@ -8,6 +8,8 @@
 // ursaRage
 #include "UrAsset.h"
 
+class Level;
+
 class Barrel : public UrAsset
 {
 public:
@@ -19,7 +21,7 @@ public:
   void setRow(const int row );
   void setColumn( const int column );
 
-  void Unmarshall( QDomElement& barrelElement );
+  void Unmarshall( QDomElement& barrelElement, Level* level );
 
 public: // Members
 

@@ -22,6 +22,9 @@ public:
     void setGridEnabled( bool enabled );
     void clear();
 
+signals:
+    void assetClicked( int assetId );
+
 protected:
     void paintEvent( QPaintEvent* event );
 

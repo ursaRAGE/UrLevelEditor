@@ -1,12 +1,12 @@
-#include "UrAssetPropertiesView.h"
+#include "UrAssetPropertiesWidget.h"
 
 #include <QToolBar>
-#include "widgets/UrBarrelPropertiesWidget.h"
-#include "widgets/UrLevelPropertiesWidget.h"
-#include "widgets/UrMeepoPropertiesWidget.h"
-#include "widgets/UrBlockPropertiesWidget.h"
+#include "UrBarrelPropertiesWidget.h"
+#include "UrLevelPropertiesWidget.h"
+#include "UrMeepoPropertiesWidget.h"
+#include "UrBlockPropertiesWidget.h"
 
-UrAssetPropertiesView::UrAssetPropertiesView(QToolBar* toolbar, QWidget *parent)
+UrAssetPropertiesWidget::UrAssetPropertiesWidget(QToolBar* toolbar, QWidget *parent)
     : QWidget(parent)
     , assetToolbar_(toolbar)
     , propertiesWidgetLayout_(NULL)
@@ -36,27 +36,27 @@ UrAssetPropertiesView::UrAssetPropertiesView(QToolBar* toolbar, QWidget *parent)
  wMeepoPropertiesWidget_->hide();
 }
 
-UrAssetPropertiesView::~UrAssetPropertiesView()
+UrAssetPropertiesWidget::~UrAssetPropertiesWidget()
 {
 
 }
 
-void UrAssetPropertiesView::displayLevelProperties( Level* level )
+void UrAssetPropertiesWidget::displayLevelProperties( Level* level )
 {
 
 }
 
-void UrAssetPropertiesView::displayBarrelProperties( Barrel* barrel )
+void UrAssetPropertiesWidget::displayBarrelProperties( Barrel* barrel )
 {
 
 }
 
-void UrAssetPropertiesView::displayBlockProperties( Block* block )
+void UrAssetPropertiesWidget::displayBlockProperties( Block* block )
 {
 
 }
 
-void UrAssetPropertiesView::displayMeepoProperties( Meepo* meepo )
+void UrAssetPropertiesWidget::displayMeepoProperties( Meepo* meepo )
 {
 
 }

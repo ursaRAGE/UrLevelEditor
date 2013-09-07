@@ -3,6 +3,8 @@
 #include "Block.h"
 #include "UrLevelEditorDefines.h"
 
+#include "Level.h"
+
 const char* Block::BLOCK_COLUMN_ATTR = "Column";
 const char* Block::BLOCK_ROW_ATTR = "Row";
 
@@ -21,11 +23,12 @@ QImage Block::image() const
   return image_;
 }
 
-void Block::Unmarshall( QDomElement& blockElement )
+void Block::Unmarshall( QDomElement& blockElement, Level* level )
 {
   QDomAttr blockRowAttr = blockElement.attributeNode(BLOCK_ROW_ATTR);
   QDomAttr blockColumnAttr = blockElement.attributeNode(BLOCK_COLUMN_ATTR);
 
   UrAsset::setRow( blockRowAttr.value().toUInt() );
   UrAsset::setColumn( blockColumnAttr.value().toUInt() );
+  UrAsset::calculateLevelEditorPosition(level->Row);
 }

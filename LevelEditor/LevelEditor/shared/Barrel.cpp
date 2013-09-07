@@ -1,5 +1,6 @@
 #include "Barrel.h"
 
+#include "Level.h"
 
 const char* Barrel::BARREL_COLUMN_ATTR = "Column";
 const char* Barrel::BARREL_ROW_ATTR = "Row";
@@ -29,7 +30,7 @@ QImage Barrel::image() const
   return image_;
 }
 
-void Barrel::Unmarshall( QDomElement& barrelElement )
+void Barrel::Unmarshall( QDomElement& barrelElement, Level* level )
 {
   QDomAttr barrelColumnAttr = barrelElement.attributeNode(BARREL_COLUMN_ATTR);
   QDomAttr barrelRowAttr = barrelElement.attributeNode(BARREL_ROW_ATTR);
@@ -50,4 +51,10 @@ void Barrel::Unmarshall( QDomElement& barrelElement )
   {
     Auto = true;
   }
+  else
+  {
+    Auto = false;
+  }
+
+  UrAsset::calculateLevelEditorPosition(level->Row);
 }

@@ -9,7 +9,7 @@ class UrLevelEditorMainWindow;
 class UrAssetModel;
 class UrAssetPresenter;
 class UrAssetRenderView;
-class UrAssetPropertiesView;
+class UrAssetPropertiesWidget;
 
 class UrLevelEditor : public QObject
 {
@@ -32,7 +32,6 @@ private: // Members
   UrLevelEditorMainWindow* mainWindow_;
   
   UrAssetRenderView* assetRenderView_;
-  UrAssetPropertiesView* assetPropertiesView_;
 
   // Model
   UrAssetModel* assetModel_;

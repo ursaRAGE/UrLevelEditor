@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include "ui_UrMeepoPropertiesWidget.h"
+class Meepo;
 
 class UrMeepoPropertiesWidget : public QWidget
 {
@@ -14,6 +15,8 @@ public:
 
 private:
     Ui::UrMeepoPropertiesWidget ui;
+
+    Meepo* displayedMeepo_;
 };
 
 #endif // URMEEPOPROPERTIESWIDGET_H

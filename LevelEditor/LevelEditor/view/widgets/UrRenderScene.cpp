@@ -15,7 +15,7 @@ UrRenderScene::UrRenderScene(QWidget *parent)
  , gridEnabled_(true)
 {
   QPalette pal = this->palette();
-  pal.setColor(this->backgroundRole(), Qt::blue);
+  pal.setColor(this->backgroundRole(), Qt::darkGray);
   this->setPalette(pal);
 }
 
@@ -41,15 +41,8 @@ void UrRenderScene::addAsset( UrAsset* asset )
 
 void UrRenderScene::paintEvent( QPaintEvent* event )
 {
-
   Q_UNUSED(event);
   QPainter painter(this);
-  //painter.setRenderHint(QPainter::Antialiasing, true);
-  foreach(UrAsset* asset, assets_)
-  {
-    painter.drawImage(QPoint(asset->X, asset->Y), asset->image());
-  }
-
   if( gridEnabled_ )
   {
     for(int lineX = 0; lineX < this->width(); lineX+=48)
@@ -62,6 +55,12 @@ void UrRenderScene::paintEvent( QPaintEvent* event )
       painter.drawLine(QPoint(0, lineY), QPoint(this->height(), lineY));
     }
   }
+
+  foreach(UrAsset* asset, assets_)
+  {
+    painter.drawImage(QPoint(asset->LevelEditorX, asset->LevelEditorY), asset->image());
+  }
+
 }
 
 void UrRenderScene::mousePressEvent( QMouseEvent* event )
@@ -70,7 +69,7 @@ void UrRenderScene::mousePressEvent( QMouseEvent* event )
   {
     if(asset->isPointTouching(event->pos()))
     {
-      
+      emit assetClicked( asset->id() );
     }
   }
   lastPoint_ = event->pos();
@@ -82,8 +81,8 @@ void UrRenderScene::mouseMoveEvent( QMouseEvent* event )
   {
     if(asset->isPointTouching(event->pos()))
     {
-      asset->X += (event->pos().x() - lastPoint_.x());
-      asset->Y += (event->pos().y() - lastPoint_.y());
+      asset->LevelEditorX += (event->pos().x() - lastPoint_.x());
+      asset->LevelEditorY += (event->pos().y() - lastPoint_.y());
       update();
     }
   }

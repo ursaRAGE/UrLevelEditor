@@ -4,7 +4,6 @@
 #include "domain/UrAssetModel.h"
 #include "presentation/UrAssetPresenter.h"
 #include "view\UrAssetRenderView.h"
-#include "view/UrAssetPropertiesView.h"
 
 
 UrLevelEditor::UrLevelEditor(QObject *parent)
@@ -36,11 +35,9 @@ void UrLevelEditor::constructDomain()
 void UrLevelEditor::constructView()
 {
   mainWindow_ = new UrLevelEditorMainWindow();
-  assetRenderView_ = new UrAssetRenderView();
+  assetRenderView_ = new UrAssetRenderView(mainWindow_->assetToolBar());
   mainWindow_->setCentralWidget(assetRenderView_);
   mainWindow_->show();
-
-  assetPropertiesView_ = new UrAssetPropertiesView(mainWindow_->assetToolBar());
 }
 
 void UrLevelEditor::constructPresentation()

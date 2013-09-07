@@ -4,6 +4,8 @@
 #include <QWidget>
 #include "ui_UrLevelPropertiesWidget.h"
 
+class Level;
+
 class UrLevelPropertiesWidget : public QWidget
 {
     Q_OBJECT
@@ -14,6 +16,8 @@ public:
 
 private:
     Ui::UrLevelPropertiesWidget ui;
+
+    Level* displayedLevel_;
 };
 
 #endif // URLEVELPROPERTIESWIDGET_H

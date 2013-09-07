@@ -140,9 +140,6 @@
     <ClCompile Include="MOC\Release\moc_UrAssetPropertiesView.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="view\UrAssetPropertiesView.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="view\widgets\UrBarrelPropertiesWidget.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -156,6 +153,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="view\widgets\UrRenderScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MOC\Debug\moc_UrAssetPropertiesWidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="MOC\Release\moc_UrAssetPropertiesWidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="view\widgets\UrAssetPropertiesWidget.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -193,14 +199,8 @@
     <CustomBuild Include="view\widgets\UrBarrelPropertiesWidget.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="view\UrAssetPropertiesView.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
     <CustomBuild Include="view\widgets\UrRenderScene.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="view\UrAssetPropertiesView.ui">
-      <Filter>Form Files</Filter>
     </CustomBuild>
     <CustomBuild Include="view\widgets\UrBlockPropertiesWidget.ui">
       <Filter>Form Files</Filter>
@@ -213,6 +213,12 @@
     </CustomBuild>
     <CustomBuild Include="view\widgets\UrLevelPropertiesWidget.ui">
       <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="view\widgets\UrAssetPropertiesWidget.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="view\widgets\UrAssetPropertiesWidget.h">
+      <Filter>Header Files</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
@@ -266,6 +272,9 @@
     </ClInclude>
     <ClInclude Include="GeneratedFiles\ui_UrAssetPropertiesView.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_UrAssetPropertiesWidget.h">
+      <Filter>Generated Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
