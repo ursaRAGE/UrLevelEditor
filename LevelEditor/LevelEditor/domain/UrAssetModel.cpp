@@ -14,6 +14,7 @@ UrAssetModel::UrAssetModel()
 
 UrAssetModel::~UrAssetModel()
 {
+  delete inputLevel_;
 }
 
 void UrAssetModel::LoadTestInputFile()

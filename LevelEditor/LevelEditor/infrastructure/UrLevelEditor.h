@@ -38,7 +38,6 @@ private: // Members
 
   // Presentation
   UrAssetPresenter* assetPresenter_;
-
 };
 
 #endif // UR_LEVEL_EDITOR_H
