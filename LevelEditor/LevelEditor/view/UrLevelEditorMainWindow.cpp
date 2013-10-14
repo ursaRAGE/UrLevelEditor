@@ -21,6 +21,7 @@ UrLevelEditorMainWindow::~UrLevelEditorMainWindow()
 void UrLevelEditorMainWindow::openSelected()
 {
   QString fileName = QFileDialog::getOpenFileName(this, tr("Open File"), "", tr("Files(*.*)"));
+  emit openPressed();
 }
 
 QToolBar* UrLevelEditorMainWindow::assetToolBar()

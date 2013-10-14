@@ -19,6 +19,9 @@ private:
 
     QToolBar* assetToolBar_;
 
+signals:
+    void openPressed();
+
 private slots:
     void openSelected();
 };
