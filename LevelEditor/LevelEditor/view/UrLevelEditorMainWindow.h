@@ -18,6 +18,9 @@ private:
     Ui::UrLevelEditorClass ui;
 
     QToolBar* assetToolBar_;
+
+private slots:
+    void openSelected();
 };
 
 #endif // URLEVELEDITOR_H
