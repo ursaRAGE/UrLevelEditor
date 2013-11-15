@@ -6,38 +6,92 @@
 #include "shared/Meepo.h"
 #include "shared/Level.h"
 
-UrAssetModel::UrAssetModel()
+UrAssetModel::UrAssetModel(QObject *parent)
+  : QObject(parent)
+  , level_(NULL)
+  , meepo_(NULL)
 {
-  inputLevel_ = new UrXmlLevelInput();
 }
 
 
 UrAssetModel::~UrAssetModel()
 {
-  delete inputLevel_;
-}
-
-void UrAssetModel::LoadTestInputFile()
-{
-  inputLevel_->loadInputFile("levels/demolevel.xml");
+  clear();
 }
 
 QList<Block*> UrAssetModel::blocks() const
 {
-  return inputLevel_->blocks();
+  return blocks_;
 }
 
 QList<Barrel*> UrAssetModel::barrels() const
 {
-  return inputLevel_->barrels();
+  return barrels_;
 }
 
 Meepo* UrAssetModel::meepo() const
 {
-  return inputLevel_->meepo();
+  return meepo_;
 }
 
 Level* UrAssetModel::level() const
 {
-  return inputLevel_->level();
+  return level_;
 }
+
+void UrAssetModel::loadInputFile( const QString& fileName )
+{
+  UrLevelInput* input = new UrXmlLevelInput();
+  input->loadInputFile(fileName);
+
+  this->clear();
+  level_ = input->level();
+  meepo_ = input->meepo();
+  blocks_ = input->blocks();
+  barrels_ = input->barrels();
+
+  delete input;
+  emit levelChanged();
+}
+
+void UrAssetModel::newLevel()
+{
+  clear();
+  level_ = new Level();
+  meepo_ = new Meepo(1);
+  emit levelChanged();
+}
+
+void UrAssetModel::save( const QString& filename )
+{
+  printf("Saving will go here...\n");
+}
+
+
+void UrAssetModel::clear()
+{
+  if( NULL != level_ )
+  {
+    delete level_;
+    level_ = NULL;
+  }
+
+  if( NULL != meepo_ )
+  {
+    delete meepo_;
+    meepo_ = NULL;
+  }
+  
+  foreach(Block* block, blocks_)
+  {
+    delete block;
+  }
+  blocks_.clear();
+
+  foreach(Barrel* barrel, barrels_)
+  {
+    delete barrel;
+  }
+  barrels_.clear();
+}
+

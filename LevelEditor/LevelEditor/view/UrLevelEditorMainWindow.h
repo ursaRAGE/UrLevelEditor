@@ -9,21 +9,27 @@ class UrLevelEditorMainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    UrLevelEditorMainWindow(QWidget *parent = 0, Qt::WFlags flags = 0);
-    ~UrLevelEditorMainWindow();
+  UrLevelEditorMainWindow(QWidget *parent = 0, Qt::WFlags flags = 0);
+  ~UrLevelEditorMainWindow();
 
-    QToolBar* assetToolBar();
+  QToolBar* assetToolBar();
 
-private:
+  private slots:
+    void onNewAction();
+    void onOpenAction();
+    void onSaveAction();
+    void onSaveAsAction();
+
+  signals:
+    void newPressed();
+    void openPressed(const QString& filename);
+    void savePressed();
+    void saveAsPressed(const QString& filename);
+
+  private:
     Ui::UrLevelEditorClass ui;
 
     QToolBar* assetToolBar_;
-
-signals:
-    void openPressed();
-
-private slots:
-    void openSelected();
 };
 
 #endif // URLEVELEDITOR_H

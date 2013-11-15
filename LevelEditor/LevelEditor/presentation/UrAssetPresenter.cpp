@@ -10,11 +10,11 @@
 #include <QList>
 
 UrAssetPresenter::UrAssetPresenter(UrAssetModel* model, UrAssetRenderView* view, QObject *parent)
- : model_(model)
+ : QObject(parent)
  , view_(view)
- , QObject(parent)
+ , model_(model)
 {
-  reloadLevel();
+  connect( model_, SIGNAL(levelChanged()), this, SLOT(reloadLevel()) );
 }
 
 UrAssetPresenter::~UrAssetPresenter()

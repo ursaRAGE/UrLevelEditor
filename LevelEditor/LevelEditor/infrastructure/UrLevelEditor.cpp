@@ -1,9 +1,9 @@
 // ursaRage
-#include "UrLevelEditor.h"
-#include "view/UrLevelEditorMainWindow.h"
 #include "domain/UrAssetModel.h"
 #include "presentation/UrAssetPresenter.h"
-#include "view\UrAssetRenderView.h"
+#include "view/UrAssetRenderView.h"
+#include "view/UrLevelEditorMainWindow.h"
+#include "UrLevelEditor.h"
 
 
 UrLevelEditor::UrLevelEditor(QObject *parent)
@@ -13,6 +13,11 @@ UrLevelEditor::UrLevelEditor(QObject *parent)
   constructDomain();
   constructView();
   constructPresentation();
+
+  connect( mainWindow_, SIGNAL(newPressed()), assetModel_, SLOT(newLevel()) );
+  connect( mainWindow_, SIGNAL(openPressed(const QString&)), assetModel_, SLOT(loadInputFile(const QString&)) );
+  connect( mainWindow_, SIGNAL(savePressed()), assetModel_, SLOT() );
+  connect( mainWindow_, SIGNAL(saveAsPressed(const QString&)), assetModel_, SLOT(save(const QString&)) );
 }
 
 UrLevelEditor::~UrLevelEditor()
@@ -29,7 +34,6 @@ void UrLevelEditor::constructInfrastructure()
 void UrLevelEditor::constructDomain()
 {
   assetModel_ = new UrAssetModel();
-  assetModel_->LoadTestInputFile();
 }
 
 void UrLevelEditor::constructView()

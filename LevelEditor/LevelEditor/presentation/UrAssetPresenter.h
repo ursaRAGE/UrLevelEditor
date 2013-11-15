@@ -11,13 +11,15 @@ class UrAssetPresenter : public QObject
  Q_OBJECT
 
 public:
-    explicit UrAssetPresenter(UrAssetModel* model, UrAssetRenderView* view, QObject *parent = NULL);
-    ~UrAssetPresenter();
-    void reloadLevel();
+  explicit UrAssetPresenter(UrAssetModel* model, UrAssetRenderView* view, QObject *parent = NULL);
+  ~UrAssetPresenter();
+
+public slots:
+  void reloadLevel();
 
 private:
-    UrAssetModel* model_;
-    UrAssetRenderView* view_;
+  UrAssetModel* model_;
+  UrAssetRenderView* view_;
 };
 
 #endif // URASSETPRESENTER_H

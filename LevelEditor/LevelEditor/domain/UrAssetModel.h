@@ -1,29 +1,46 @@
 #ifndef URSA_ASSET_MODEL_H
 #define URSA_ASSET_MODEL_H
 
+// Qt
 #include <QList>
-class UrLevelInput;
-class Block;
+#include <QObject>
+
+// ursaRAGE
 class Barrel;
-class Meepo;
+class Block;
 class Level;
+class Meepo;
+class UrLevelInput;
 
-class UrAssetModel
+class UrAssetModel : public QObject
 {
-public:
-  UrAssetModel();
-  ~UrAssetModel();
+  Q_OBJECT
 
-  void LoadTestInputFile();
+  public:
+    UrAssetModel(QObject *parent = 0);
+    ~UrAssetModel();
 
-  QList<Block*> blocks() const;
-  QList<Barrel*> barrels() const;
+    QList<Block*> blocks() const;
+    QList<Barrel*> barrels() const;
 
-  Meepo* meepo() const;
-  Level* level() const;
+    Meepo* meepo() const;
+    Level* level() const;
 
-private:
-  UrLevelInput* inputLevel_;
+  public slots:
+    void loadInputFile(const QString& fileName);
+    void newLevel();
+    void save( const QString& filename );
+
+  signals:
+    void levelChanged();
+
+  private: // Methods
+    void clear();
+  private: // Members
+    Level* level_;
+    QList<Block*> blocks_;
+    QList<Barrel*> barrels_;
+    Meepo* meepo_;
 };
 
 #endif // URSA_ASSET_MODEL_H
