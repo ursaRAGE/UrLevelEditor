@@ -42,7 +42,11 @@ void UrAssetPresenter::reloadLevel()
   view_->addAssetToLevel(model_->meepo());
 
   Level* level = model_->level();
-  const int levelWidth = level->Column * 58;
-  const int levelHeight = level->Row * 58;
+
+  //Calculating the size of square
+  const unsigned int factorOfSquare = 58;
+
+  const int levelWidth = level->Column * factorOfSquare;
+  const int levelHeight = level->Row * factorOfSquare;
   view_->setLevelSize( levelWidth,levelHeight );
 }
