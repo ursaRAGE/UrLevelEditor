@@ -11,8 +11,8 @@ const char* Level::LEVEL_SIZE_ROW_ATTR = "Rows";
 
 Level::Level()
   : Id(-1)
-  , Column(0)
-  , Row(0)
+  , Column(10)
+  , Row(10)
 {
 }
 
